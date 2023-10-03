@@ -18,9 +18,9 @@ mobile_data = {
 # print(mobile_data.values())
 # print(mobile_data["data"][0])
 
-name = mobile_data["data"][0]["name"]
-made= mobile_data["data"][0]["made"]
+model = mobile_data["data"][0]["name"]
+country= mobile_data["data"][0]["made"]
 usd_price = int(mobile_data["data"][0]["price"].strip(" USD"))
 exchange_rate = int(mobile_data["exchnage_rate"])
 bdt_price = usd_price * exchange_rate
-print(f'{name} is made in {made}. The price is {usd_price} which is almost equal to {bdt_price} BDT')
+print(f'{model} is made in {country}. The price is {usd_price} which is almost equal to {bdt_price} BDT')
