@@ -38,7 +38,7 @@ post_data = [
 
 i = 0
 while i < len(post_data):
-    title = post_data[i]["title"]
-    post_data[i]["slug"]= title
+    title = post_data[i]["title"].strip()
+    post_data[i]["slug"] = title
     print(post_data[i])
     i += 1
