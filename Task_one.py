@@ -11,16 +11,12 @@ mobile_data = {
     'exchnage_rate': 107.25
             }
 
-# Xiaomi Note 5 is made in China. The price is 300 USD which is almost equal to 30975 BDT
-
-
-# print(mobile_data.keys())
-# print(mobile_data.values())
-# print(mobile_data["data"][0])
-
-model = mobile_data["data"][0]["name"]
-country= mobile_data["data"][0]["made"]
-usd_price = int(mobile_data["data"][0]["price"].strip(" USD"))
-exchange_rate = int(mobile_data["exchnage_rate"])
-bdt_price = usd_price * exchange_rate
-print(f'{model} is made in {country}. The price is {usd_price} USD which is almost equal to {bdt_price} BDT')
+i = 0
+while i < len(mobile_data["data"]):
+    model = mobile_data["data"][i]["name"]
+    country = mobile_data["data"][i]["made"]
+    usd_price = float(mobile_data["data"][i]["price"].strip(" USD"))
+    exchange_rate = float(mobile_data["exchnage_rate"])
+    bdt_price = usd_price * exchange_rate
+    print(f'{model} is made in {country}. The price is {usd_price} USD which is almost equal to {bdt_price} BDT')
+    i += 1
