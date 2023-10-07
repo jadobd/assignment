@@ -30,15 +30,9 @@ post_data = [
 "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
 }]
 
-
-# print(post_data[0]["title"])
-# title= post_data[0]["title"]
-# slug = title
-# print(slug)
-
 i = 0
 while i < len(post_data):
-    title = post_data[i]["title"].strip()
+    title = post_data[i]["title"].replace(" ","-")
     post_data[i]["slug"] = title
     print(post_data[i])
     i += 1
